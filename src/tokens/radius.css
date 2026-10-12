@@ -1,0 +1,13 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --radius-none: 0px; /** Figma 변수 미생성, 보드 제안값 기준(추후 변수 확정 시 변경 가능) */
+  --radius-xs: 4px; /** Figma 변수 미생성, 보드 제안값 기준(추후 변수 확정 시 변경 가능) */
+  --radius-sm: 8px; /** Figma 변수 미생성, 보드 제안값 기준(추후 변수 확정 시 변경 가능) */
+  --radius-md: 16px; /** Figma 변수 미생성, 보드 제안값 기준(추후 변수 확정 시 변경 가능) */
+  --radius-lg: 24px; /** Figma 변수 미생성, 보드 제안값 기준(추후 변수 확정 시 변경 가능) */
+  --radius-xl: 48px; /** Figma 변수 미생성, 보드 제안값 기준(추후 변수 확정 시 변경 가능) */
+  --radius-full: 9999px; /** Figma 변수 미생성, 보드 제안값 기준(추후 변수 확정 시 변경 가능). pill/원형 용도 */
+}

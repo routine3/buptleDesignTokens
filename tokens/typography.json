@@ -1,0 +1,115 @@
+{
+  "font": {
+    "heading": {
+      "xxxxl": {
+        "family": { "value": "Apple SD Gothic Neo" },
+        "size": { "value": "48.829px" },
+        "weight": { "value": "400" },
+        "line-height": { "value": "59px" },
+        "letter-spacing": { "value": "-0.25px" }
+      },
+      "xxxl": {
+        "family": { "value": "Apple SD Gothic Neo" },
+        "size": { "value": "39.063px" },
+        "weight": { "value": "400" },
+        "line-height": { "value": "47px" },
+        "letter-spacing": { "value": "-0.25px" }
+      },
+      "xxl": {
+        "family": { "value": "Apple SD Gothic Neo" },
+        "size": { "value": "31.25px" },
+        "weight": { "value": "400" },
+        "line-height": { "value": "38px" },
+        "letter-spacing": { "value": "-0.25px" }
+      },
+      "xl": {
+        "family": { "value": "Apple SD Gothic Neo" },
+        "size": { "value": "25px" },
+        "weight": { "value": "400" },
+        "line-height": { "value": "30px" },
+        "letter-spacing": { "value": "-0.25px" }
+      },
+      "large": {
+        "family": { "value": "Apple SD Gothic Neo" },
+        "size": { "value": "20px" },
+        "weight": { "value": "700" },
+        "line-height": { "value": "24px" },
+        "letter-spacing": { "value": "-0.25px" }
+      }
+    },
+    "label": {
+      "large": {
+        "family": { "value": "Apple SD Gothic Neo" },
+        "size": { "value": "20px" },
+        "weight": { "value": "600" },
+        "line-height": { "value": "24px" },
+        "letter-spacing": { "value": "0px" }
+      },
+      "medium": {
+        "family": { "value": "Apple SD Gothic Neo" },
+        "size": { "value": "16px" },
+        "weight": { "value": "600" },
+        "line-height": { "value": "19px" },
+        "letter-spacing": { "value": "0px" }
+      },
+      "small": {
+        "family": { "value": "Apple SD Gothic Neo" },
+        "size": { "value": "14px" },
+        "weight": { "value": "600" },
+        "line-height": { "value": "17px" },
+        "letter-spacing": { "value": "0px" }
+      },
+      "bsmall": {
+        "family": { "value": "Apple SD Gothic Neo" },
+        "size": { "value": "14px" },
+        "weight": { "value": "700" },
+        "line-height": { "value": "17px" },
+        "letter-spacing": { "value": "0px" }
+      },
+      "xsmall": {
+        "family": { "value": "Apple SD Gothic Neo" },
+        "size": { "value": "12.8px" },
+        "weight": { "value": "600" },
+        "line-height": { "value": "15px" },
+        "letter-spacing": { "value": "0px" }
+      }
+    },
+    "paragraph": {
+      "large": {
+        "family": { "value": "Apple SD Gothic Neo" },
+        "size": { "value": "20px" },
+        "weight": { "value": "400" },
+        "line-height": { "value": "30px" },
+        "letter-spacing": { "value": "0px" }
+      },
+      "medium": {
+        "family": { "value": "Apple SD Gothic Neo" },
+        "size": { "value": "16px" },
+        "weight": { "value": "400" },
+        "line-height": { "value": "22px" },
+        "letter-spacing": { "value": "0px" }
+      },
+      "bmedium": {
+        "family": { "value": "Apple SD Gothic Neo" },
+        "size": { "value": "16px" },
+        "weight": { "value": "600" },
+        "line-height": { "value": "22px" },
+        "letter-spacing": { "value": "0px" }
+      },
+      "small": {
+        "family": { "value": "Apple SD Gothic Neo" },
+        "size": { "value": "14px" },
+        "weight": { "value": "400" },
+        "line-height": { "value": "18px" },
+        "letter-spacing": { "value": "0.25px" }
+      },
+      "xsmall": {
+        "family": { "value": "Apple SD Gothic Neo" },
+        "size": { "value": "12.8px" },
+        "weight": { "value": "400" },
+        "line-height": { "value": "19px" },
+        "letter-spacing": { "value": "0px" }
+      }
+    }
+  }
+}

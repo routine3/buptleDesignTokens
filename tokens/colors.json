@@ -1,0 +1,123 @@
+{
+  "color": {
+    "primitive": {
+      "white": { "value": "#ffffff" },
+      "blue": {
+        "800": { "value": "#1e40af" },
+        "600": { "value": "#2563eb" },
+        "300": { "value": "#93c5fd" },
+        "200": { "value": "#bfdbfe" },
+        "50": { "value": "#eff6ff" }
+      },
+      "sky": {
+        "700": { "value": "#0369a1" },
+        "600": { "value": "#0284c7" },
+        "500": { "value": "#0ea5e9" },
+        "200": { "value": "#bae6fd" },
+        "100": { "value": "#e0f2fe" },
+        "50": { "value": "#ecfeff" }
+      },
+      "teal": {
+        "700": { "value": "#0f766e" },
+        "500": { "value": "#14b8a6" }
+      },
+      "emerald": {
+        "50": { "value": "#ecfdf5" }
+      },
+      "green": {
+        "600": { "value": "#16a34a" },
+        "500": { "value": "#22c55e" },
+        "100": { "value": "#bef264" },
+        "50": { "value": "#f0fdf4" }
+      },
+      "yellow": {
+        "500": { "value": "#eab308" },
+        "400": { "value": "#facc15" },
+        "300": { "value": "#fde047" },
+        "100": { "value": "#fef9c3" },
+        "50": { "value": "#fffbeb" }
+      },
+      "orange": {
+        "400": { "value": "#fb923c" }
+      },
+      "red": {
+        "500": { "value": "#ef4444" },
+        "300": { "value": "#fca5a5" },
+        "50": { "value": "#fef2f2" }
+      },
+      "gray": {
+        "950": { "value": "#030712" },
+        "600": { "value": "#525252" },
+        "500": { "value": "#737373" },
+        "400": { "value": "#a3a3a3" },
+        "300": { "value": "#d4d4d4" },
+        "200": { "value": "#e5e5e5" },
+        "100": { "value": "#f5f5f5" },
+        "50": { "value": "#f9fafb" }
+      },
+      "slate": {
+        "300": { "value": "#cbd5e1" },
+        "200": { "value": "#e2e8f0" },
+        "100": { "value": "#f1f5f9" }
+      },
+      "zinc": {
+        "300": { "value": "#d4d4d8" }
+      }
+    },
+    "brand": {
+      "advisory": { "value": "{color.primitive.teal.500}" },
+      "contract": { "value": "{color.primitive.sky.600}" },
+      "litigation": { "value": "{color.primitive.yellow.500}" },
+      "primary": { "value": "{color.primitive.blue.600}" },
+      "secondary": { "value": "{color.primitive.blue.300}" },
+      "tertiary": { "value": "{color.primitive.yellow.400}" }
+    },
+    "surface": {
+      "border": { "value": "{color.primitive.slate.300}" },
+      "container": { "value": "{color.primitive.white}" },
+      "primary": { "value": "{color.primitive.slate.100}" },
+      "secondary": { "value": "{color.primitive.slate.200}" }
+    },
+    "contents": {
+      "primary": { "value": "{color.primitive.gray.950}" },
+      "secondary": { "value": "{color.primitive.gray.600}" },
+      "tertiary": { "value": "{color.primitive.gray.500}" },
+      "quaternary": { "value": "{color.primitive.gray.400}" }
+    },
+    "border": {
+      "brand": { "value": "{color.primitive.blue.600}" },
+      "danger": { "value": "{color.primitive.red.500}" },
+      "default": { "value": "{color.primitive.gray.300}" },
+      "divider": { "value": "{color.primitive.gray.200}" },
+      "strong": { "value": "{color.primitive.gray.400}" }
+    },
+    "state": {
+      "error": { "value": "{color.primitive.red.500}" },
+      "error-transparent": {
+        "value": "#ef44441a",
+        "comment": "Red/500(#ef4444)에 10% 알파를 적용한 Figma 변형(alias+opacity)이라 Style Dictionary 참조 문법으로는 그대로 표현 불가 — 계산된 값 고정"
+      },
+      "info": { "value": "{color.primitive.sky.500}" },
+      "inherit": { "value": "{color.primitive.gray.100}" },
+      "success": { "value": "{color.primitive.green.600}" },
+      "success-transparent": {
+        "value": "#16a34a1a",
+        "comment": "Green/600(#16a34a)에 10% 알파를 적용한 Figma 변형(alias+opacity)이라 Style Dictionary 참조 문법으로는 그대로 표현 불가 — 계산된 값 고정"
+      },
+      "warning": { "value": "{color.primitive.orange.400}" }
+    },
+    "chart": {
+      "grid": { "value": "{color.primitive.gray.200}" },
+      "label": { "value": "{color.primitive.gray.600}" },
+      "series-1": { "value": "{color.primitive.sky.600}" },
+      "series-2": { "value": "{color.primitive.teal.500}" },
+      "series-3": { "value": "{color.primitive.yellow.400}" },
+      "series-4": { "value": "{color.primitive.blue.800}" },
+      "series-5": { "value": "{color.primitive.orange.400}" },
+      "value-text": {
+        "value": "{color.primitive.gray.950}",
+        "comment": "Figma 변수명 Chart/Value. 'value'는 Style Dictionary 예약 키(토큰 leaf 판별용)와 충돌하여 'value-text'로 치환함"
+      }
+    }
+  }
+}

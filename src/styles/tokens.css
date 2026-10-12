@@ -1,0 +1,244 @@
+/**
+ * 법틀 법무솔루션 2.9 — 디자인 토큰
+ *
+ * Figma 파일 `1. 법틀 법무솔루션 2.9`에서 추출 (routine3@buptle.com, 2026-09-10).
+ * 원본: design-tokens.md + color.primitive/semantic.json, typography.json, spacing.json, elevation.json
+ * (W3C Design Tokens 포맷, Mode 1 단일 모드 — 다크모드 없음)
+ *
+ * 레이어 구조:
+ *   1) Primitive — 원시 팔레트. semantic 토큰의 alias 대상일 뿐, 컴포넌트에서 직접 참조 금지.
+ *   2) Semantic  — 제품 코드가 참조할 레이어 (bg-brand-primary, text-contents-primary 등).
+ *
+ * 원본 문서에 남아있는 미해결 이슈 (design-tokens.md 6장):
+ *   - 레거시 컬러 별칭 7종(Primary/Secondary/... 페인트 스타일)은 시맨틱 토큰과 값이 중복되어 이식하지 않음.
+ *   - green-100(#BEF264)·sky-50·yellow-50은 이름과 실제 색상 계열이 어긋나 있음 — 원본 값 그대로 유지.
+ *   - teal-700, zinc-300은 대응 스타일이 없는 미사용 변수 — 참고용으로만 포함.
+ *   - Figma에 Radius(모서리 반경) 컬렉션이 없어 여기 포함하지 않음.
+ */
+
+@theme {
+  /* ---------------------------------------------------------------------
+   * 1. Color / Primitive — semantic 토큰의 alias 전용, 직접 사용 금지
+   * ------------------------------------------------------------------- */
+  --color-white: #ffffff;
+
+  --color-blue-800: #1e40af;
+  --color-blue-600: #2563eb;
+  --color-blue-300: #93c5fd;
+  --color-blue-200: #bfdbfe;
+  --color-blue-50: #eff6ff;
+
+  --color-sky-700: #0369a1;
+  --color-sky-600: #0284c7;
+  --color-sky-500: #0ea5e9;
+  --color-sky-200: #bae6fd;
+  --color-sky-100: #e0f2fe;
+  --color-sky-50: #ecfeff; /* 주의: Tailwind sky-50이 아니라 cyan-50 값 */
+
+  --color-teal-700: #0f766e; /* 미사용 — 대응 Figma 스타일 없음 */
+  --color-teal-500: #14b8a6;
+
+  --color-emerald-50: #ecfdf5;
+
+  --color-green-600: #16a34a;
+  --color-green-500: #22c55e;
+  --color-green-100: #bef264; /* 주의: 실제로는 lime 계열. green 스케일 이탈 */
+  --color-green-50: #f0fdf4;
+
+  --color-yellow-500: #eab308;
+  --color-yellow-400: #facc15;
+  --color-yellow-300: #fde047;
+  --color-yellow-100: #fef9c3;
+  --color-yellow-50: #fffbeb; /* 주의: Tailwind yellow-50이 아니라 amber-50 값 */
+
+  --color-orange-400: #fb923c;
+
+  --color-red-500: #ef4444;
+  --color-red-300: #fca5a5;
+  --color-red-50: #fef2f2;
+
+  /* gray: 950/50은 Tailwind gray, 600~100은 Tailwind neutral 값이 섞여 있음 (원본 그대로) */
+  --color-gray-950: #030712;
+  --color-gray-600: #525252;
+  --color-gray-500: #737373;
+  --color-gray-400: #a3a3a3;
+  --color-gray-300: #d4d4d4;
+  --color-gray-200: #e5e5e5;
+  --color-gray-100: #f5f5f5;
+  --color-gray-50: #f9fafb;
+
+  --color-slate-300: #cbd5e1;
+  --color-slate-200: #e2e8f0;
+  --color-slate-100: #f1f5f9;
+
+  --color-zinc-300: #d4d4d8; /* 미사용 — 대응 Figma 스타일 없음 */
+  --color-zinc-100: #f4f4f5; /* "Bg/Bg-100" 페인트 스타일 — 원본 토큰 추출(design-tokens.md)엔 없었지만 Button·Input 컴포넌트 양쪽에서 반복 확인된 값이라 추가함 */
+
+  /* ---------------------------------------------------------------------
+   * 2. Color / Semantic — 제품 코드는 이 레이어만 참조
+   * ------------------------------------------------------------------- */
+  --color-brand-primary: var(--color-blue-600);
+  --color-brand-secondary: var(--color-blue-300);
+  --color-brand-tertiary: var(--color-yellow-400);
+  --color-brand-contract: var(--color-sky-600); /* 계약 업무 도메인 컬러 */
+  --color-brand-counsel: var(--color-teal-500); /* 자문 업무 도메인 컬러 */
+  --color-brand-lawsuit: var(--color-yellow-500); /* 소송 업무 도메인 컬러 */
+
+  --color-surface-primary: var(--color-slate-100); /* 페이지 기본 배경 */
+  --color-surface-secondary: var(--color-slate-200);
+  --color-surface-container: var(--color-white); /* 카드·패널 배경 */
+  --color-surface-border: var(--color-slate-300);
+
+  --color-contents-primary: var(--color-gray-950);
+  --color-contents-secondary: var(--color-gray-600);
+  --color-contents-tertiary: var(--color-gray-500);
+  --color-contents-white: var(--color-white);
+  --color-contents-gray: var(--color-gray-400);
+  --color-contents-transparent: #a3a3a380; /* gray-400 + 50% */
+
+  --color-border-active: var(--color-gray-400);
+  --color-border-default: var(--color-gray-300);
+  --color-border-divider: var(--color-gray-200);
+
+  --color-state-error: var(--color-red-500);
+  --color-state-success: var(--color-green-600);
+  --color-state-info: var(--color-sky-500);
+  --color-state-warning: var(--color-orange-400);
+  --color-state-inherit: var(--color-gray-100); /* disabled·비활성 배경 */
+  --color-state-success-transparent: #16a34a1a; /* green-600 10% — 하드코딩 값, alias 아님 */
+  --color-state-error-transparent: #ef44441a; /* red-500 10% — 하드코딩 값, alias 아님 */
+
+  /* ---------------------------------------------------------------------
+   * 3. Typography
+   *    font-size는 1.25배 모듈러 스케일의 반올림 권장값 사용 (원본 소수점 값은 각 주석 참고).
+   *    text-{heading|label|paragraph}-{size} 유틸리티가 font-size/line-height/
+   *    letter-spacing/font-weight를 한 번에 적용합니다.
+   * ------------------------------------------------------------------- */
+  --font-family-base:
+    "Apple SD Gothic Neo", "Pretendard", -apple-system, "Malgun Gothic",
+    sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --text-heading-xxxxl: 48px; /* 원본 48.829px */
+  --text-heading-xxxxl--line-height: 59px;
+  --text-heading-xxxxl--letter-spacing: -0.25px;
+  --text-heading-xxxxl--font-weight: var(--font-weight-regular);
+
+  --text-heading-xxxl: 40px; /* 원본 39.063px */
+  --text-heading-xxxl--line-height: 47px;
+  --text-heading-xxxl--letter-spacing: -0.25px;
+  --text-heading-xxxl--font-weight: var(--font-weight-regular);
+
+  --text-heading-xxl: 32px; /* 원본 31.25px */
+  --text-heading-xxl--line-height: 38px;
+  --text-heading-xxl--letter-spacing: -0.25px;
+  --text-heading-xxl--font-weight: var(--font-weight-regular);
+
+  --text-heading-xl: 25px;
+  --text-heading-xl--line-height: 30px;
+  --text-heading-xl--letter-spacing: -0.25px;
+  --text-heading-xl--font-weight: var(--font-weight-regular);
+
+  --text-heading-lg: 20px;
+  --text-heading-lg--line-height: 24px;
+  --text-heading-lg--letter-spacing: -0.25px;
+  --text-heading-lg--font-weight: var(--font-weight-bold);
+
+  --text-label-lg: 20px;
+  --text-label-lg--line-height: 24px;
+  --text-label-lg--letter-spacing: 0px;
+  --text-label-lg--font-weight: var(--font-weight-semibold);
+
+  --text-label-md: 16px;
+  --text-label-md--line-height: 19px;
+  --text-label-md--letter-spacing: 0px;
+  --text-label-md--font-weight: var(--font-weight-semibold);
+
+  --text-label-sm: 14px;
+  --text-label-sm--line-height: 17px;
+  --text-label-sm--letter-spacing: 0px;
+  --text-label-sm--font-weight: var(--font-weight-semibold);
+
+  --text-label-sm-bold: 14px;
+  --text-label-sm-bold--line-height: 17px;
+  --text-label-sm-bold--letter-spacing: 0px;
+  --text-label-sm-bold--font-weight: var(--font-weight-bold);
+
+  --text-label-xs: 13px; /* 원본 12.8px */
+  --text-label-xs--line-height: 15px;
+  --text-label-xs--letter-spacing: 0px;
+  --text-label-xs--font-weight: var(--font-weight-semibold);
+
+  --text-paragraph-lg: 20px;
+  --text-paragraph-lg--line-height: 30px;
+  --text-paragraph-lg--letter-spacing: 0px;
+  --text-paragraph-lg--font-weight: var(--font-weight-regular);
+
+  --text-paragraph-md: 16px;
+  --text-paragraph-md--line-height: 22px;
+  --text-paragraph-md--letter-spacing: 0px;
+  --text-paragraph-md--font-weight: var(--font-weight-regular);
+
+  --text-paragraph-sm: 14px;
+  --text-paragraph-sm--line-height: 18px;
+  --text-paragraph-sm--letter-spacing: 0.25px;
+  --text-paragraph-sm--font-weight: var(--font-weight-regular);
+
+  --text-paragraph-xs: 13px; /* 원본 12.8px */
+  --text-paragraph-xs--line-height: 19px;
+  --text-paragraph-xs--letter-spacing: 0px;
+  --text-paragraph-xs--font-weight: var(--font-weight-regular);
+
+  /* ---------------------------------------------------------------------
+   * 4. Spacing — Figma 'Gap' 컬렉션, 4px 배수 스케일 (68~124 구간 없음)
+   *    주의: 키가 Tailwind 기본 spacing 배수 표기와 동일해서 기본값을 덮어씁니다.
+   *    예) p-4 는 기본 1rem(16px)이 아니라 4px 이 됩니다 — 이 프로젝트 전역에 적용됩니다.
+   * ------------------------------------------------------------------- */
+  --spacing-0: 0px;
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-28: 28px;
+  --spacing-32: 32px;
+  --spacing-36: 36px;
+  --spacing-40: 40px;
+  --spacing-44: 44px;
+  --spacing-48: 48px;
+  --spacing-52: 52px;
+  --spacing-56: 56px;
+  --spacing-60: 60px;
+  --spacing-64: 64px;
+  --spacing-128: 128px;
+
+  /* ---------------------------------------------------------------------
+   * 5. Elevation — Material 계열 3중 그림자 (basic만 단일 그림자)
+   * ------------------------------------------------------------------- */
+  --shadow-elevation-1:
+    0px 1px 3px 0px #00000033, 0px 2px 1px 0px #0000001f,
+    0px 1px 1px 0px #00000024;
+  --shadow-elevation-3:
+    0px 1px 8px 0px #00000033, 0px 3px 3px 0px #0000001f,
+    0px 3px 4px 0px #00000024;
+  --shadow-elevation-4:
+    0px 2px 4px 0px #00000033, 0px 1px 10px 0px #0000001f,
+    0px 4px 5px 0px #00000024;
+  --shadow-elevation-8:
+    0px 5px 5px 0px #00000033, 0px 3px 14px 0px #0000001f,
+    0px 8px 10px 0px #00000024;
+  --shadow-elevation-12:
+    0px 7px 8px 0px #00000033, 0px 5px 22px 0px #0000001f,
+    0px 12px 17px 0px #00000024;
+  --shadow-elevation-16:
+    0px 8px 10px 0px #00000033, 0px 6px 30px 0px #0000001f,
+    0px 16px 24px 0px #00000024;
+  --shadow-elevation-24:
+    0px 11px 15px 0px #00000033, 0px 9px 46px 0px #0000001f,
+    0px 24px 38px 0px #00000024;
+  --shadow-elevation-basic: 0px 2px 8px 0px #00000026;
+}

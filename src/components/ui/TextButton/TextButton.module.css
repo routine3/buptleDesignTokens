@@ -1,0 +1,68 @@
+/**
+ * Figma: "법틀 디자인시스템 v1"(fileKey jRZzfr9vGsyGKCvT5HS0Gp) `02 Components`
+ * › "Radio / Toggle / Link" 섹션(82:111) › `TextButton` 컴포넌트 세트.
+ *
+ * 같은 섹션의 `Link`(82:110, hover 시 밑줄)와 시각적으로 유사하지만, TextButton은
+ * 네비게이션이 아닌 액션 트리거(예: "수정")용이라 hover 시 밑줄 대신 진한 색으로만
+ * 피드백을 준다(Button의 secondary kind가 hover 시 Blue/800로 진해지는 것과 동일 패턴).
+ *
+ * 배경/보더/padding 없음(텍스트 크기에 맞춰 자동), disabled 시 opacity 40%
+ * (Figma 실측값, Button의 60%와는 별개 컴포넌트라 다름).
+ */
+
+.textButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-brand-primary);
+  font-family: var(--font-label-small-family);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.textButton:hover:not(:disabled) {
+  color: var(--color-primitive-blue-800);
+}
+
+.textButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.textButton:focus-visible {
+  outline: 2px solid var(--color-border-brand);
+  outline-offset: 2px;
+}
+
+.icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Size: Small = Label-Small 텍스트, Large = Label-Medium 텍스트       */
+/* ------------------------------------------------------------------ */
+.small {
+  font-size: var(--font-label-small-size);
+  font-weight: var(--font-label-small-weight);
+  line-height: var(--font-label-small-line-height);
+  letter-spacing: var(--font-label-small-letter-spacing);
+  font-family: var(--font-label-small-family);
+}
+
+.large {
+  font-size: var(--font-label-medium-size);
+  font-weight: var(--font-label-medium-weight);
+  line-height: var(--font-label-medium-line-height);
+  letter-spacing: var(--font-label-medium-letter-spacing);
+  font-family: var(--font-label-medium-family);
+}

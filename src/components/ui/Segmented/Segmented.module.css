@@ -1,0 +1,59 @@
+/**
+ * Figma: "법틀 디자인시스템 v1"(fileKey jRZzfr9vGsyGKCvT5HS0Gp) `02 Components`
+ * › `Tab` 섹션(82:78) › `Segment`(334:1584)/`Segmented`(334:1585).
+ *
+ * Hover/Disabled는 Figma 원본 디자인에 정의가 없어 기존 Button/Link/TextButton
+ * 패턴을 따라 만들었다(Figma 쪽 열린 항목 #30, 육안 재확인 권장).
+ */
+
+.segmented {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  background-color: var(--color-surface-primary);
+  border: 1px solid var(--color-border-divider);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-4);
+}
+
+.segment {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius-xs);
+  padding: var(--spacing-8) var(--spacing-16);
+  color: var(--color-contents-secondary);
+  font-family: var(--font-label-small-family);
+  font-size: var(--font-label-small-size);
+  font-weight: var(--font-label-small-weight);
+  line-height: var(--font-label-small-line-height);
+  letter-spacing: var(--font-label-small-letter-spacing);
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.segment:hover:not(:disabled):not(.selected) {
+  color: var(--color-contents-primary);
+}
+
+.segment:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.segment.selected {
+  background-color: var(--color-surface-container);
+  border-color: var(--color-border-brand);
+  color: var(--color-contents-primary);
+}
+
+.segment.selected:hover:not(:disabled) {
+  border-color: var(--color-primitive-blue-800);
+}

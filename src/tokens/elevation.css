@@ -1,0 +1,28 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --elevation-1:
+    0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 2px 1px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14); /** Figma Effect Style 'elevation1' (3-layer drop shadow, offsetX/spread 항상 0). Style Dictionary composite shadow 타입을 쓰지 않고 최종 box-shadow 문자열을 직접 값으로 넣음 */
+  --elevation-3:
+    0px 1px 8px 0px rgba(0, 0, 0, 0.2), 0px 3px 3px 0px rgba(0, 0, 0, 0.12),
+    0px 3px 4px 0px rgba(0, 0, 0, 0.14); /** Figma Effect Style 'elevation3' (3-layer drop shadow, offsetX/spread 항상 0) */
+  --elevation-4:
+    0px 2px 4px 0px rgba(0, 0, 0, 0.2), 0px 1px 10px 0px rgba(0, 0, 0, 0.12),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14); /** Figma Effect Style 'elevation4' (3-layer drop shadow, offsetX/spread 항상 0) */
+  --elevation-8:
+    0px 5px 5px 0px rgba(0, 0, 0, 0.2), 0px 3px 14px 0px rgba(0, 0, 0, 0.12),
+    0px 8px 10px 0px rgba(0, 0, 0, 0.14); /** Figma Effect Style 'elevation8' (3-layer drop shadow, offsetX/spread 항상 0) */
+  --elevation-12:
+    0px 7px 8px 0px rgba(0, 0, 0, 0.2), 0px 5px 22px 0px rgba(0, 0, 0, 0.12),
+    0px 12px 17px 0px rgba(0, 0, 0, 0.14); /** Figma Effect Style 'elevation12' (3-layer drop shadow, offsetX/spread 항상 0) */
+  --elevation-16:
+    0px 8px 10px 0px rgba(0, 0, 0, 0.2), 0px 6px 30px 0px rgba(0, 0, 0, 0.12),
+    0px 16px 24px 0px rgba(0, 0, 0, 0.14); /** Figma Effect Style 'elevation16' (3-layer drop shadow, offsetX/spread 항상 0) */
+  --elevation-24:
+    0px 11px 15px 0px rgba(0, 0, 0, 0.2), 0px 9px 46px 0px rgba(0, 0, 0, 0.12),
+    0px 24px 38px 0px rgba(0, 0, 0, 0.14); /** Figma Effect Style 'elevation24' (3-layer drop shadow, offsetX/spread 항상 0) */
+  --elevation-basic: 0px 2px 8px 0px rgba(0, 0, 0, 0.15); /** Figma Effect Style 'elevation_basic' (독립형 단일 레이어 그림자, 목록형 elevation1~24 계열과 별도) */
+}

@@ -1,0 +1,145 @@
+/**
+ * Figma: `00 Components` › `Buttons` › "Button / Basic" 컴포넌트 세트
+ * (node-id 3354:26920, Kind × Size × Status × IconPosition = 26 variant)
+ * https://www.figma.com/design/mp4KoPM2jqzU2N9yGVBSrf?node-id=3354-26920
+ *
+ * Status(Default/Hover)는 React prop이 아니라 :hover 의사클래스로 구현했다.
+ * 색상/타이포는 get_design_context가 알려준 Figma 변수를 그대로 프로젝트 토큰(src/tokens/*.css)에 매핑했다:
+ *   brand/primary → --color-brand-primary, blue/800 → --color-primitive-blue-800(세만틱 없음),
+ *   brand/tertiary → --color-brand-tertiary, yellow/500 → --color-primitive-yellow-500(세만틱 없음),
+ *   contents/secondary·gray/600(둘 다 #525252) → --color-contents-secondary,
+ *   border/default → --color-border-default, border/strong → --color-border-strong,
+ *   gray/100·gray/300 → --color-primitive-gray-100/300 (State/Inherit 세만틱은 disabled 전용이라
+ *   이 버튼의 hover/default 배경엔 의미가 안 맞아 primitive를 직접 사용— 보고서 참고),
+ *   white → --color-primitive-white (텍스트/배경용 세만틱 "white" 토큰이 없어 primitive 직접 사용).
+ * 모서리: Figma "radius/xs"(4px) → --radius-xs.
+ */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: none;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-label-medium-family);
+  font-weight: var(--font-label-medium-weight);
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-border-brand);
+  outline-offset: 2px;
+}
+
+.icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Size: Medium = 40px, gap 8 / px 24 / Label-Medium 텍스트           */
+/* ------------------------------------------------------------------ */
+.medium {
+  height: 40px;
+  gap: var(--spacing-8);
+  padding-inline: var(--spacing-24);
+  font-size: var(--font-label-medium-size);
+  line-height: var(--font-label-medium-line-height);
+  letter-spacing: var(--font-label-medium-letter-spacing);
+}
+
+/* Size: Small = gap 4 / px 16 / Label-Small 텍스트.
+   높이는 Figma 원본이 Kind별로 30px/32px로 갈려서(Primary·Secondary·Secondary Solid=32,
+   Negative·Tertiary·Solid=30) kind 클래스와 조합해 아래에서 개별 지정한다. */
+.small {
+  gap: var(--spacing-4);
+  padding-inline: var(--spacing-16);
+  font-size: var(--font-label-small-size);
+  line-height: var(--font-label-small-line-height);
+  letter-spacing: var(--font-label-small-letter-spacing);
+}
+
+.small.primary,
+.small.secondary,
+.small.secondarySolid {
+  height: 32px;
+}
+
+.small.negative,
+.small.tertiary,
+.small.solid {
+  height: 30px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Kind별 색상 (Default → Hover)                                      */
+/* ------------------------------------------------------------------ */
+.primary {
+  background-color: var(--color-brand-primary);
+  color: var(--color-primitive-white);
+}
+.primary:hover:not(:disabled) {
+  background-color: var(--color-primitive-blue-800);
+}
+
+.negative {
+  background-color: var(--color-primitive-gray-100);
+  color: var(--color-contents-secondary);
+}
+.negative:hover:not(:disabled) {
+  background-color: var(--color-primitive-gray-300);
+}
+
+.secondary {
+  background-color: transparent;
+  color: var(--color-brand-primary);
+  border: 1px solid var(--color-brand-primary);
+}
+.secondary:hover:not(:disabled) {
+  color: var(--color-primitive-blue-800);
+  border-color: var(--color-primitive-blue-800);
+}
+
+.secondarySolid {
+  background-color: var(--color-surface-container);
+  color: var(--color-brand-primary);
+  border: 1px solid var(--color-brand-primary);
+}
+.secondarySolid:hover:not(:disabled) {
+  color: var(--color-primitive-blue-800);
+  border-color: var(--color-primitive-blue-800);
+}
+
+.tertiary {
+  background-color: var(--color-brand-tertiary);
+  color: var(--color-contents-secondary);
+}
+.tertiary:hover:not(:disabled) {
+  background-color: var(--color-primitive-yellow-500);
+}
+
+.solid {
+  background-color: var(--color-surface-container);
+  color: var(--color-contents-secondary);
+  border: 1px solid var(--color-border-default);
+}
+.solid:hover:not(:disabled) {
+  background-color: var(--color-primitive-gray-100);
+  border-color: var(--color-border-strong);
+}

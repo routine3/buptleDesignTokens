@@ -1,0 +1,32 @@
+{
+  "radius": {
+    "none": {
+      "value": "0px",
+      "comment": "Figma 변수 미생성, 보드 제안값 기준(추후 변수 확정 시 변경 가능)"
+    },
+    "xs": {
+      "value": "4px",
+      "comment": "Figma 변수 미생성, 보드 제안값 기준(추후 변수 확정 시 변경 가능)"
+    },
+    "sm": {
+      "value": "8px",
+      "comment": "Figma 변수 미생성, 보드 제안값 기준(추후 변수 확정 시 변경 가능)"
+    },
+    "md": {
+      "value": "16px",
+      "comment": "Figma 변수 미생성, 보드 제안값 기준(추후 변수 확정 시 변경 가능)"
+    },
+    "lg": {
+      "value": "24px",
+      "comment": "Figma 변수 미생성, 보드 제안값 기준(추후 변수 확정 시 변경 가능)"
+    },
+    "xl": {
+      "value": "48px",
+      "comment": "Figma 변수 미생성, 보드 제안값 기준(추후 변수 확정 시 변경 가능)"
+    },
+    "full": {
+      "value": "9999px",
+      "comment": "Figma 변수 미생성, 보드 제안값 기준(추후 변수 확정 시 변경 가능). pill/원형 용도"
+    }
+  }
+}

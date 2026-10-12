@@ -1,0 +1,2 @@
+- [Link vs Button 재검증](project_link-vs-button-recheck.md) — SettingsCard(4817-58326)의 "수정"은 Link(4394:41386)와 ButtonBasic-Secondary(4394:42119) 두 가지로 쓰임, tertiary kind는 매치 안 됨
+- [v1 라이브러리 vs 작업파일 대조 감사](project_v1-library-vs-workfile-audit.md) — v1 공식 변수는 --color-* 확정, 레거시 4394세대(Button/Link/Checkbox/Toggle/Chip) 마이그레이션 미완료가 근본원인, law_dropdown은 구조적으로 두 버전 공존
